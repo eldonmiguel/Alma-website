@@ -1,0 +1,7 @@
+# Old Missions page merged into Volunteers. "!" forces the redirect even if an old copy is still on the server.
+/missions.html     /volunteers     301!
+/missions          /volunteers     301!
+/missions/*        /volunteers     301!
+/es/missions.html  /es/volunteers  301!
+/es/missions       /es/volunteers  301!
+/es/missions/*     /es/volunteers  301!
