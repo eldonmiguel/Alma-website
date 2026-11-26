@@ -1,0 +1,21 @@
+# Netlify serves the prebuilt site from the repo root. No build step needed.
+[build]
+  publish = "."
+  command = ""
+
+# Always re-check pages so phones never show an old copy of the site.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+[[headers]]
+  for = "/es/"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+[functions]
+  directory = "netlify/functions"
