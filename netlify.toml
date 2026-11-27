@@ -3,19 +3,7 @@
   publish = "."
   command = ""
 
-# Always re-check pages so phones never show an old copy of the site.
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"
-[[headers]]
-  for = "/"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"
-[[headers]]
-  for = "/es/"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"
+# Cache headers live in _headers.
 
 [functions]
   directory = "netlify/functions"

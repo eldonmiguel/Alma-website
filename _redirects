@@ -6,6 +6,12 @@
 /es/missions       /es/volunteers  301!
 /es/missions/*     /es/volunteers  301!
 
+# Old Sponsor page merged into Give (same receipts).
+/sponsor.html     /give#sponsor     301!
+/sponsor          /give#sponsor     301!
+/es/sponsor.html  /es/give#sponsor  301!
+/es/sponsor       /es/give#sponsor  301!
+
 # Volunteer Hub shortcut: used in Hub invite emails -> the Volunteer Hub (its own Netlify site, alma-hub)
 /hub/go     https://hub.aloveformissionsabroad.com/  302!
 /es/hub/go  https://hub.aloveformissionsabroad.com/  302!
