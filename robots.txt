@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aloveformissionsabroad.netlify.app/sitemap.xml
+Sitemap: https://aloveformissionsabroad.com/sitemap.xml
