@@ -6,9 +6,6 @@
 /es/missions       /es/volunteers  301!
 /es/missions/*     /es/volunteers  301!
 
-# Volunteer Hub shortcut (Nov 27): used in Hub invite emails
-/hub/go  https://claude.ai/artifact/UZtyjb8SLPQjKmXuP66Czk  302!
-/es/hub/go  https://claude.ai/artifact/UZtyjb8SLPQjKmXuP66Czk  302!
-# hub.aloveformissionsabroad.com (domain alias, Nov 27) -> current Volunteer Hub; later the rebuilt Hub
-https://hub.aloveformissionsabroad.com/*  https://claude.ai/artifact/UZtyjb8SLPQjKmXuP66Czk  302!
-http://hub.aloveformissionsabroad.com/*  https://claude.ai/artifact/UZtyjb8SLPQjKmXuP66Czk  302!
+# Volunteer Hub shortcut: used in Hub invite emails -> the Volunteer Hub (its own Netlify site, alma-hub)
+/hub/go     https://hub.aloveformissionsabroad.com/  302!
+/es/hub/go  https://hub.aloveformissionsabroad.com/  302!

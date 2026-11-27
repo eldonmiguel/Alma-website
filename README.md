@@ -6,3 +6,9 @@ This repository mirrors exactly what is live. The site is built from Astro sourc
 (kept in the ALMA project files) and uploaded to Netlify directly; this repo is
 updated with the same files so the two always match. `_redirects` and `_headers`
 are Netlify configuration.
+
+## Note (Nov 27, 2026)
+Some pages were edited directly in this repo (not in the Astro source): Volunteer Hub links now
+point to https://hub.aloveformissionsabroad.com, the old-Hub sync notes were removed from
+/volunteers and /board, and repeated copy was trimmed on /give, /about and /stories (EN + ES).
+Before publishing again from the Astro source, copy these changes into it, or they will be lost.
