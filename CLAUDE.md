@@ -35,6 +35,14 @@
 - "Get mission updates" form (`updates`) on Home and Give: the webhook stores the email in the Hub (Admin → Mailing list).
 - Volunteer Hub: separate repo `eldonmiguel/alma-volunteer-hub` (hub.aloveformissionsabroad.com).
 
+## Spanish (es/ pages): Guatemalan Spanish, reviewed with Ruth
+- Use usted everywhere ("Inscríbase", "Done", "su donación"). Never tú or vos.
+- Trips are "jornadas" (jornada quirúrgica), not "misiones". "Misión" only means ALMA's purpose ("Nuestra misión").
+- "Portal de Voluntarios", never "Volunteer Hub". Operating room: "sala de operaciones". Scrub techs: "instrumentistas".
+  Underserved: "comunidades de escasos recursos". Mission fee donation: "aporte de voluntario". CHG grant: "subvención".
+- Translate everything, including schedules and button text. Write it the way a Guatemalan would say it, not word for word from English.
+- The Hub's Spanish follows the same rules.
+
 ## Brand and facts
 - Turquoise #07B2AF is the main color, with pink #E74280 as the accent. Don't use navy in new materials.
 - ALMA was founded by Mike Oswald and Dra. Vicky Loza. A Love For Missions Abroad Inc., 501(c)(3), EIN 83-2378971.
