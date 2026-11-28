@@ -24,6 +24,9 @@
   `contact` and `patrocinadores-guatemala` email mike@aacda.com.
 - Flyers: PDFs are generated live from the Hub's missions by the Supabase `flyer` function (English only).
   Photos are in `img/flyer/`, and the source code is in the Hub repo.
+- Missions on /volunteers: the cards and the register list update themselves from the Hub (`/api/missions.json`,
+  Supabase function missions-public). To add, change or remove a mission, do it in the Hub, not here.
+- "Get mission updates" form (`updates`) on Home and Give: the webhook stores the email in the Hub (Admin → Mailing list).
 - Volunteer Hub: separate repo `eldonmiguel/alma-volunteer-hub` (hub.aloveformissionsabroad.com).
 
 ## Brand and facts
