@@ -26,7 +26,8 @@
 - Header: Volunteer + Donate buttons on every page (no navy Hub button). The mobile menu's sign-in goes straight to the Hub.
 - Forms: `contact` and `patrocinadores-guatemala` email mike@aacda.com. `hub-alert` (hidden, in hub.html) is posted by the
   Supabase function hub-alert, so new Hub sign-ups, mission requests and withdrawals email mike@aacda.com. Keep it.
-  `hub-alert-es` (hidden, in es/hub.html) is the same alert in Spanish, for Ruth.
+  `hub-alert-es` (hidden, in es/hub.html) is the same alert in Spanish and emails Ruth (both her addresses).
+  Netlify email notifications are set per form, so nobody gets both languages. Don't add an "any form" email.
   The old `volunteer-signup` form was removed.
 - Flyers: PDFs are generated live from the Hub's missions by the Supabase `flyer` function (English only).
   Photos are in `img/flyer/`, and the source code is in the Hub repo.
