@@ -2,10 +2,8 @@
 
 The published files for aloveformissionsabroad.netlify.app (hosted on Netlify).
 
-This repository mirrors exactly what is live. The site is built from Astro source
-(kept in the ALMA project files) and uploaded to Netlify directly; this repo is
-updated with the same files so the two always match. `_redirects` and `_headers`
-are Netlify configuration.
+This repository IS the live site's source of truth: every push to `main` publishes on Netlify.
+See CLAUDE.md for the rules. Don't publish from the old Astro project.
 
 ## Note (Nov 27, 2026)
 Some pages were edited directly in this repo (not in the Astro source): Volunteer Hub links now
