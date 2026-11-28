@@ -27,5 +27,8 @@
 /es/join/flyer        /es/volunteers#flyers  301!
 
 # Volunteer Hub shortcut: used in Hub invite emails -> the Volunteer Hub (its own Netlify site, alma-hub)
+# /signup is the short link for posts and texts: everyone signs up in the Hub
+/signup     https://hub.aloveformissionsabroad.com/  302!
+/es/signup  https://hub.aloveformissionsabroad.com/?lang=es  302!
 /hub/go     https://hub.aloveformissionsabroad.com/  302!
 /es/hub/go  https://hub.aloveformissionsabroad.com/  302!
