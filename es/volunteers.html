@@ -35,4 +35,42 @@ const YE = "2027-01-01T00:00:00-07:00";
           setTimeout(function () { if (!window.customElements || !customElements.get("givebutter-goal-bar")) fail(); }, 9000);
         }
       })();
-    })();</script> <script type="module" src="../assets/Base.astro_astro_type_script_index_0_lang.D4-yqHIM.js"></script> </body> </html>
+    })();</script> <script type="module" src="../assets/Base.astro_astro_type_script_index_0_lang.D4-yqHIM.js"></script> <script data-missions-sync>(async()=>{try{
+const es=document.documentElement.lang==='es';
+const r=await fetch('/api/missions.json',{cache:'no-store'});if(!r.ok)return;const j=await r.json();const ms=(j&&j.missions)||[];if(!ms.length)return;
+const rail=document.querySelector('#missions .trips');if(!rail)return;
+const MO=es?['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic']:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const p=d=>d.split('-').map(Number);
+const range=(a,b)=>{const[ya,ma,da]=p(a),[yb,mb,db]=p(b);return es?`${da} ${MO[ma-1]} – ${db} ${MO[mb-1]} ${yb}`:`${MO[ma-1]} ${da} – ${MO[mb-1]} ${db}, ${yb}`;};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):s;
+const keep=new Set(ms.map(m=>m.code));
+const cards=[...rail.querySelectorAll('article.trip[id]')];
+const tpl=cards[cards.length-1];
+cards.forEach(c=>{if(!keep.has(c.id))c.remove();});
+for(const m of ms){
+  let c=document.getElementById(m.code);
+  if(!c&&tpl){
+    c=tpl.cloneNode(true);c.id=m.code;c.removeAttribute('data-reveal');c.style.opacity='1';c.style.transform='none';
+    const it=c.querySelector('details.itin');if(it)it.remove();
+    c.querySelector('h3').textContent=cap(m.specialties||m.name);
+    const chips=c.querySelector('.chips');if(chips){const open=chips.querySelector('.chip.open');chips.innerHTML='';if(open)chips.appendChild(open);
+      String(m.specialties||'').split(/\s*(?:,|\/|\band\b|\by\b)\s*/i).filter(Boolean).slice(0,4).forEach(t=>{const s=document.createElement('span');s.className='chip';s.textContent=cap(t);chips.appendChild(s);});}
+    const lead=c.querySelectorAll('dl.kv dd')[2];if(lead)lead.textContent=m.lead_surgeon||(es?'Por confirmar':'To be announced');
+    c.querySelectorAll('[data-pick-trip]').forEach(a=>a.setAttribute('data-pick-trip',m.code));
+    rail.appendChild(c);
+  }
+  if(!c)continue;
+  const [y,mo,d]=p(m.start_date);const td=c.querySelector('.trip-date');
+  if(td)td.innerHTML=`<small>${MO[mo-1]}</small><b>${d}</b><span>${y}</span>`;
+  const dd=c.querySelector('dl.kv dd');if(dd)dd.textContent=range(m.start_date,m.end_date);
+  if(!es&&m.lead_surgeon){const lead=c.querySelectorAll('dl.kv dd')[2];if(lead&&lead.textContent.replace(/\W/g,'')!==m.lead_surgeon.replace(/\W/g,''))lead.textContent=m.lead_surgeon;}
+}
+[...rail.querySelectorAll('article.trip[id]')].sort((a,b)=>ms.findIndex(m=>m.code===a.id)-ms.findIndex(m=>m.code===b.id)).forEach(a=>rail.appendChild(a));
+const sel=document.getElementById('r-trip');
+if(sel){const keepOpts=[...sel.options].filter(o=>!o.value||o.value==='any');const cur=sel.value;sel.innerHTML='';keepOpts.forEach(o=>sel.appendChild(o));
+  for(const m of ms){const card=document.getElementById(m.code);const title=(card&&card.querySelector('h3')?.textContent)||cap(m.specialties||m.name);const o=document.createElement('option');o.value=m.code;o.textContent=`${title} · ${range(m.start_date,m.end_date)}`;sel.appendChild(o);}
+  if([...sel.options].some(o=>o.value===cur))sel.value=cur;
+  const q=new URLSearchParams(location.search).get('trip');if(q&&[...sel.options].some(o=>o.value===q))sel.value=q;}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-pick-trip]');if(a&&sel&&[...sel.options].some(o=>o.value===a.dataset.pickTrip))sel.value=a.dataset.pickTrip;});
+}catch(e){}})();</script></body> </html>
