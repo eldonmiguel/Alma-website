@@ -12,6 +12,17 @@
 /es/sponsor.html  /es/give#sponsor  301!
 /es/sponsor       /es/give#sponsor  301!
 
+# PDF flyers: generated live from the Volunteer Hub's missions (Supabase "flyer" function)
+/flyers/list.json     https://gpvantwhxxhytjuilcff.supabase.co/functions/v1/flyer?list=1          200!
+/es/flyers/list.json  https://gpvantwhxxhytjuilcff.supabase.co/functions/v1/flyer?list=1&lang=es  200!
+/flyers/:file         https://gpvantwhxxhytjuilcff.supabase.co/functions/v1/flyer?file=:file          200!
+/es/flyers/:file      https://gpvantwhxxhytjuilcff.supabase.co/functions/v1/flyer?file=:file&lang=es  200!
+# Old April-only printable flyer page -> the flyer list
+/join/flyer.html      /volunteers#flyers     301!
+/join/flyer           /volunteers#flyers     301!
+/es/join/flyer.html   /es/volunteers#flyers  301!
+/es/join/flyer        /es/volunteers#flyers  301!
+
 # Volunteer Hub shortcut: used in Hub invite emails -> the Volunteer Hub (its own Netlify site, alma-hub)
 /hub/go     https://hub.aloveformissionsabroad.com/  302!
 /es/hub/go  https://hub.aloveformissionsabroad.com/  302!
